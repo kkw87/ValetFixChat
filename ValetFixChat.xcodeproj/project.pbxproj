@@ -8,11 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		481DDF742200B7D60092E4DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDF732200B7D60092E4DE /* AppDelegate.swift */; };
-		481DDF762200B7D60092E4DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDF752200B7D60092E4DE /* ViewController.swift */; };
 		481DDF792200B7D60092E4DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481DDF772200B7D60092E4DE /* Main.storyboard */; };
 		481DDF7B2200B7D70092E4DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481DDF7A2200B7D70092E4DE /* Assets.xcassets */; };
 		481DDF7E2200B7D70092E4DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481DDF7C2200B7D70092E4DE /* LaunchScreen.storyboard */; };
 		481DDF892200B7D70092E4DE /* ValetFixChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDF882200B7D70092E4DE /* ValetFixChatTests.swift */; };
+		481DDF992200B91C0092E4DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 481DDF982200B91C0092E4DE /* GoogleService-Info.plist */; };
+		481DDF9B2200BB380092E4DE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDF9A2200BB380092E4DE /* MainScreenViewController.swift */; };
+		481DDF9D2200BDC30092E4DE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDF9C2200BDC30092E4DE /* UIView+Extensions.swift */; };
+		481DDFA12201853C0092E4DE /* AccountCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFA02201853C0092E4DE /* AccountCreationViewController.swift */; };
+		481DDFA422020F140092E4DE /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFA322020F140092E4DE /* UserDetails.swift */; };
+		481DDFA62202120F0092E4DE /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFA52202120F0092E4DE /* AccountManager.swift */; };
+		481DDFA922021BB80092E4DE /* ChatSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFA822021BB80092E4DE /* ChatSelectionTableViewController.swift */; };
+		481DDFAB22021C500092E4DE /* UserInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFAA22021C500092E4DE /* UserInformationTableViewController.swift */; };
+		481DDFAD22021F270092E4DE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFAC22021F270092E4DE /* ChatViewController.swift */; };
+		481DDFAF2202209D0092E4DE /* FIrebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFAE2202209D0092E4DE /* FIrebaseDatabase.swift */; };
+		481DDFB822026E6F0092E4DE /* ChatSelectionNetworkmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFB722026E6F0092E4DE /* ChatSelectionNetworkmanager.swift */; };
+		481DDFBC22029AF20092E4DE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFBB22029AF20092E4DE /* Message.swift */; };
+		481DDFBE220390FB0092E4DE /* ChatNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFBD220390FB0092E4DE /* ChatNetworkManager.swift */; };
+		481DDFC02203C9860092E4DE /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFBF2203C9860092E4DE /* UINavigationController+Extensions.swift */; };
+		481DDFC32203D1A90092E4DE /* ChatSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFC12203D1A90092E4DE /* ChatSelectionTableViewCell.swift */; };
+		48E580702203FF2F00B37C64 /* MessagePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5806F2203FF2F00B37C64 /* MessagePhoto.swift */; };
+		48E580722204928300B37C64 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E580712204928300B37C64 /* UIColor+Extensions.swift */; };
+		5A5D732D3B7BB66A0D063CCE /* Pods_ValetFixChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A9F8EC17B074F5F68CF187 /* Pods_ValetFixChatTests.framework */; };
+		9541E6C757C862D984641BC9 /* Pods_ValetFixChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262A5FE85393FA117798FB7 /* Pods_ValetFixChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B06800EF97777B79FD736D0 /* Pods-ValetFixChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetFixChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetFixChatTests/Pods-ValetFixChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		481DDF702200B7D60092E4DE /* ValetFixChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValetFixChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481DDF732200B7D60092E4DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		481DDF752200B7D60092E4DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		481DDF782200B7D60092E4DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		481DDF7A2200B7D70092E4DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		481DDF7D2200B7D70092E4DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +54,28 @@
 		481DDF842200B7D70092E4DE /* ValetFixChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValetFixChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		481DDF882200B7D70092E4DE /* ValetFixChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValetFixChatTests.swift; sourceTree = "<group>"; };
 		481DDF8A2200B7D70092E4DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481DDF982200B91C0092E4DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		481DDF9A2200BB380092E4DE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		481DDF9C2200BDC30092E4DE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		481DDFA02201853C0092E4DE /* AccountCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationViewController.swift; sourceTree = "<group>"; };
+		481DDFA322020F140092E4DE /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		481DDFA52202120F0092E4DE /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		481DDFA822021BB80092E4DE /* ChatSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSelectionTableViewController.swift; sourceTree = "<group>"; };
+		481DDFAA22021C500092E4DE /* UserInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTableViewController.swift; sourceTree = "<group>"; };
+		481DDFAC22021F270092E4DE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		481DDFAE2202209D0092E4DE /* FIrebaseDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseDatabase.swift; sourceTree = "<group>"; };
+		481DDFB722026E6F0092E4DE /* ChatSelectionNetworkmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSelectionNetworkmanager.swift; sourceTree = "<group>"; };
+		481DDFBB22029AF20092E4DE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		481DDFBD220390FB0092E4DE /* ChatNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNetworkManager.swift; sourceTree = "<group>"; };
+		481DDFBF2203C9860092E4DE /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		481DDFC12203D1A90092E4DE /* ChatSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		48E5806F2203FF2F00B37C64 /* MessagePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePhoto.swift; sourceTree = "<group>"; };
+		48E580712204928300B37C64 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		69F31EE1704CE29129A8AD35 /* Pods-ValetFixChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetFixChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat.debug.xcconfig"; sourceTree = "<group>"; };
+		8262A5FE85393FA117798FB7 /* Pods_ValetFixChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetFixChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A9F8EC17B074F5F68CF187 /* Pods_ValetFixChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetFixChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FCE5DE5EF9A57520D438AE9 /* Pods-ValetFixChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetFixChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat.release.xcconfig"; sourceTree = "<group>"; };
+		D5E9A377B43064146740472F /* Pods-ValetFixChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetFixChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetFixChatTests/Pods-ValetFixChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9541E6C757C862D984641BC9 /* Pods_ValetFixChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +91,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5D732D3B7BB66A0D063CCE /* Pods_ValetFixChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B60DB736FD948D5F6F5A57B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8262A5FE85393FA117798FB7 /* Pods_ValetFixChat.framework */,
+				86A9F8EC17B074F5F68CF187 /* Pods_ValetFixChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4640B3710659AC8319929181 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69F31EE1704CE29129A8AD35 /* Pods-ValetFixChat.debug.xcconfig */,
+				9FCE5DE5EF9A57520D438AE9 /* Pods-ValetFixChat.release.xcconfig */,
+				D5E9A377B43064146740472F /* Pods-ValetFixChatTests.debug.xcconfig */,
+				2B06800EF97777B79FD736D0 /* Pods-ValetFixChatTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		481DDF672200B7D60092E4DE = {
 			isa = PBXGroup;
 			children = (
 				481DDF722200B7D60092E4DE /* ValetFixChat */,
 				481DDF872200B7D70092E4DE /* ValetFixChatTests */,
 				481DDF712200B7D60092E4DE /* Products */,
+				4640B3710659AC8319929181 /* Pods */,
+				0B60DB736FD948D5F6F5A57B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +141,14 @@
 		481DDF722200B7D60092E4DE /* ValetFixChat */ = {
 			isa = PBXGroup;
 			children = (
-				481DDF732200B7D60092E4DE /* AppDelegate.swift */,
-				481DDF752200B7D60092E4DE /* ViewController.swift */,
-				481DDF772200B7D60092E4DE /* Main.storyboard */,
-				481DDF7A2200B7D70092E4DE /* Assets.xcassets */,
-				481DDF7C2200B7D70092E4DE /* LaunchScreen.storyboard */,
-				481DDF7F2200B7D70092E4DE /* Info.plist */,
+				481DDFB4220269530092E4DE /* Storyboard */,
+				481DDFA7220212740092E4DE /* Database Mapping */,
+				481DDFA222020E570092E4DE /* Models */,
+				481DDF972200B82E0092E4DE /* Utility Files */,
+				481DDF962200B7F30092E4DE /* Supporting Files */,
+				481DDF952200B7ED0092E4DE /* View Controllers */,
+				481DDF942200B7E70092E4DE /* Network Managers */,
+				481DDF932200B7E10092E4DE /* Views */,
 			);
 			path = ValetFixChat;
 			sourceTree = "<group>";
@@ -96,6 +162,84 @@
 			path = ValetFixChatTests;
 			sourceTree = "<group>";
 		};
+		481DDF932200B7E10092E4DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				481DDFC12203D1A90092E4DE /* ChatSelectionTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		481DDF942200B7E70092E4DE /* Network Managers */ = {
+			isa = PBXGroup;
+			children = (
+				481DDFB722026E6F0092E4DE /* ChatSelectionNetworkmanager.swift */,
+				481DDFBD220390FB0092E4DE /* ChatNetworkManager.swift */,
+			);
+			path = "Network Managers";
+			sourceTree = "<group>";
+		};
+		481DDF952200B7ED0092E4DE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				481DDF9A2200BB380092E4DE /* MainScreenViewController.swift */,
+				481DDFA02201853C0092E4DE /* AccountCreationViewController.swift */,
+				481DDFAA22021C500092E4DE /* UserInformationTableViewController.swift */,
+				481DDFA822021BB80092E4DE /* ChatSelectionTableViewController.swift */,
+				481DDFAC22021F270092E4DE /* ChatViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		481DDF962200B7F30092E4DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				481DDF982200B91C0092E4DE /* GoogleService-Info.plist */,
+				481DDF732200B7D60092E4DE /* AppDelegate.swift */,
+				481DDF7A2200B7D70092E4DE /* Assets.xcassets */,
+				481DDF7F2200B7D70092E4DE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		481DDF972200B82E0092E4DE /* Utility Files */ = {
+			isa = PBXGroup;
+			children = (
+				481DDF9C2200BDC30092E4DE /* UIView+Extensions.swift */,
+				481DDFBF2203C9860092E4DE /* UINavigationController+Extensions.swift */,
+				48E580712204928300B37C64 /* UIColor+Extensions.swift */,
+			);
+			path = "Utility Files";
+			sourceTree = "<group>";
+		};
+		481DDFA222020E570092E4DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				481DDFA322020F140092E4DE /* UserDetails.swift */,
+				481DDFA52202120F0092E4DE /* AccountManager.swift */,
+				481DDFBB22029AF20092E4DE /* Message.swift */,
+				48E5806F2203FF2F00B37C64 /* MessagePhoto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		481DDFA7220212740092E4DE /* Database Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				481DDFAE2202209D0092E4DE /* FIrebaseDatabase.swift */,
+			);
+			path = "Database Mapping";
+			sourceTree = "<group>";
+		};
+		481DDFB4220269530092E4DE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				481DDF772200B7D60092E4DE /* Main.storyboard */,
+				481DDF7C2200B7D70092E4DE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481DDF8D2200B7D70092E4DE /* Build configuration list for PBXNativeTarget "ValetFixChat" */;
 			buildPhases = (
+				FB24D59E98D9BFEC5AEA17C8 /* [CP] Check Pods Manifest.lock */,
 				481DDF6C2200B7D60092E4DE /* Sources */,
 				481DDF6D2200B7D60092E4DE /* Frameworks */,
 				481DDF6E2200B7D60092E4DE /* Resources */,
+				240654B028B455C55C197840 /* [CP] Embed Pods Frameworks */,
+				BF82E8C9B136D0AF647F1590 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481DDF902200B7D70092E4DE /* Build configuration list for PBXNativeTarget "ValetFixChatTests" */;
 			buildPhases = (
+				1E0ECFACBECAF2B199D4CE3C /* [CP] Check Pods Manifest.lock */,
 				481DDF802200B7D70092E4DE /* Sources */,
 				481DDF812200B7D70092E4DE /* Frameworks */,
 				481DDF822200B7D70092E4DE /* Resources */,
@@ -180,6 +328,7 @@
 				481DDF7E2200B7D70092E4DE /* LaunchScreen.storyboard in Resources */,
 				481DDF7B2200B7D70092E4DE /* Assets.xcassets in Resources */,
 				481DDF792200B7D60092E4DE /* Main.storyboard in Resources */,
+				481DDF992200B91C0092E4DE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +341,133 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E0ECFACBECAF2B199D4CE3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ValetFixChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		240654B028B455C55C197840 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF82E8C9B136D0AF647F1590 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat-resources.sh",
+				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccountKitStrings.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB24D59E98D9BFEC5AEA17C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ValetFixChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		481DDF6C2200B7D60092E4DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481DDF762200B7D60092E4DE /* ViewController.swift in Sources */,
+				481DDFA422020F140092E4DE /* UserDetails.swift in Sources */,
+				481DDFA922021BB80092E4DE /* ChatSelectionTableViewController.swift in Sources */,
+				481DDF9D2200BDC30092E4DE /* UIView+Extensions.swift in Sources */,
 				481DDF742200B7D60092E4DE /* AppDelegate.swift in Sources */,
+				481DDF9B2200BB380092E4DE /* MainScreenViewController.swift in Sources */,
+				481DDFAF2202209D0092E4DE /* FIrebaseDatabase.swift in Sources */,
+				481DDFA12201853C0092E4DE /* AccountCreationViewController.swift in Sources */,
+				481DDFA62202120F0092E4DE /* AccountManager.swift in Sources */,
+				481DDFC32203D1A90092E4DE /* ChatSelectionTableViewCell.swift in Sources */,
+				481DDFBE220390FB0092E4DE /* ChatNetworkManager.swift in Sources */,
+				481DDFB822026E6F0092E4DE /* ChatSelectionNetworkmanager.swift in Sources */,
+				481DDFAD22021F270092E4DE /* ChatViewController.swift in Sources */,
+				48E580702203FF2F00B37C64 /* MessagePhoto.swift in Sources */,
+				481DDFAB22021C500092E4DE /* UserInformationTableViewController.swift in Sources */,
+				481DDFC02203C9860092E4DE /* UINavigationController+Extensions.swift in Sources */,
+				48E580722204928300B37C64 /* UIColor+Extensions.swift in Sources */,
+				481DDFBC22029AF20092E4DE /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +627,12 @@
 		};
 		481DDF8E2200B7D70092E4DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69F31EE1704CE29129A8AD35 /* Pods-ValetFixChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C59S222Q28;
-				INFOPLIST_FILE = ValetFixChat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ValetFixChat/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,11 +646,12 @@
 		};
 		481DDF8F2200B7D70092E4DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FCE5DE5EF9A57520D438AE9 /* Pods-ValetFixChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C59S222Q28;
-				INFOPLIST_FILE = ValetFixChat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ValetFixChat/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +665,7 @@
 		};
 		481DDF912200B7D70092E4DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E9A377B43064146740472F /* Pods-ValetFixChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +687,7 @@
 		};
 		481DDF922200B7D70092E4DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B06800EF97777B79FD736D0 /* Pods-ValetFixChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
