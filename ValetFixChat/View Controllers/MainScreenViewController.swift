@@ -50,7 +50,9 @@ class MainScreenViewController: UIViewController {
         return vc
     }()
     
+    //Account manager used to login user through firebase
     private let accountManager = AccountManager()
+    //User phone number, this is set when account manager finds the user on firebase
     private var userPhoneNumber : String?
     
     // MARK: - VC lifecycle
@@ -61,27 +63,23 @@ class MainScreenViewController: UIViewController {
         }
 
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        if accountKit.currentAccessToken != nil {
-            
-            //Segue directly to chat
-            //Get phone number, log user in
-        }
-        
-    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+//
+//        if accountKit.currentAccessToken != nil {
+//
+//            //Segue directly to chat
+//            //Get phone number, log user in
+//        }
+//
+//    }
     
     // MARK: - Login Functions
 
     
     @IBAction func login(_ sender: Any) {
-        // TODO: - REMOVE AUTO LOGIN
-        self.userPhoneNumber = "3478049088"
-        
-        self.performSegue(withIdentifier: Storyboard.ChatSegue, sender: self)
-        //self.present(phoneNumberVerificationVC, animated: true, completion: nil)
+        self.present(phoneNumberVerificationVC, animated: true, completion: nil)
     }
     
     
@@ -115,7 +113,13 @@ class MainScreenViewController: UIViewController {
         }
         
     }
+    
+    //Unwind target in which a logged in user wishes to log out, they are sent back to the main screen
+    @IBAction func unwindFromLogout(segue : UIStoryboardSegue) {
+        
+    }
  
+    //User has finished creating their account, we take the user details provided and create a new account for them on firebase with the provided details
     @IBAction func unwindFromAccountCreation(segue : UIStoryboardSegue) {
         
         guard let accountCreationVC = segue.source as? AccountCreationViewController else {
@@ -164,15 +168,19 @@ class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController : AKFViewControllerDelegate {
     
+    //User entered in their number for verification and used it to log in
     func viewController(_ viewController: (UIViewController & AKFViewController)!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
 
+        //Request phone number from facebook account kit verfication process
         accountKit.requestAccount { [unowned self] (account, error) in
             guard let phoneNumber = account?.phoneNumber?.phoneNumber else {
                 return
             }
             
+            //Display a spinner to give user some feedback while we try to pull their information
             SVProgressHUD.show()
             
+            //Try to log in the user with the account manager
             self.accountManager.loginUserWith(phoneNumber: phoneNumber, completionHandler: { (error) in
                 
                 DispatchQueue.main.async {
@@ -189,8 +197,10 @@ extension MainScreenViewController : AKFViewControllerDelegate {
                     return
                 }
                 
+                //Set the users phone number we pulled from account kit, this will be used in the segue used for login
                 self.userPhoneNumber = phoneNumber
                 
+                //We wait until all view controller presentations are finished before sending the user to the chat selection screen
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                 self.performSegue(withIdentifier: Storyboard.ChatSegue, sender: self)
                 })

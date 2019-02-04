@@ -10,5 +10,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    
+    public class var popUpBackgroundColor : UIColor {
+        return UIColor.black.withAlphaComponent(0.50)
+    }
 }

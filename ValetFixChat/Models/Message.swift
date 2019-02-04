@@ -9,52 +9,45 @@
 import Foundation
 import MessageKit
 
+//Enum to determine what is in the message
+enum MessageContent {
+    case Image(UIImage)
+    case Audio(URL)
+    case Text(String)
+}
+
 struct Message : MessageType{
-    
-    let senderID : String
-    let senderDisplayName : String
-    let receiverID : String
-    let content : MessageKind
-    let timeStamp : Date
-    let messageID : String
-    
-    var image : UIImage?
-    var imageURL : URL?
-    
-    //Audio
+        
+    var senderID : String
+    var senderDisplayName : String
+    var receiverID : String
+    var kind : MessageKind
+    var sentDate : Date
+    var messageId : String
 
-    init(withText : String, senderID : String, senderDisplayName : String, messageID : String, receiverID : String, timeStamp : Date) {
+    init(withMessageContent : MessageContent, senderID : String, senderDisplayName : String, messageID : String, receiverID : String, timeStamp : Date) {
+        
         self.senderID = senderID
-        self.messageID = messageID
-        self.timeStamp = timeStamp
-        self.receiverID = receiverID
-        self.content = MessageKind.text(withText)
-        self.senderDisplayName = senderDisplayName
-    }
-    
-    init(photo: UIImage, senderID : String, senderDisplayName : String, messageID : String, receiverID : String, timeStamp : Date) {
-        self.senderID = senderID
-        self.messageID = messageID
-        self.timeStamp = timeStamp
-        self.content = MessageKind.photo(MessagePhoto(image: photo))
+        self.messageId = messageID
+        self.sentDate = timeStamp
         self.receiverID = receiverID
         self.senderDisplayName = senderDisplayName
+        
+        switch withMessageContent {
+        case .Audio(let audioURL) :
+            self.kind = MessageKind.video(MessageMedia(mediaURL : audioURL))
+        case .Image(let messageImage) :
+            self.kind = MessageKind.photo(MessageMedia(photo : messageImage))
+        case .Text(let messageBody) :
+            self.kind = MessageKind.text(messageBody)
+        }
+        
     }
 
+    //Variables used for messageKit messageType declaration
     var sender: Sender {
         return Sender(id: senderID, displayName: senderDisplayName)
     }
 
-    var messageId: String {
-        return self.messageID
-    }
-
-    var sentDate: Date {
-        return timeStamp
-    }
-
-    var kind: MessageKind {
-        return content
-    }
 
 }

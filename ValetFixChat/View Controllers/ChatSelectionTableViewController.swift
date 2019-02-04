@@ -17,8 +17,12 @@ class ChatSelectionTableViewController: UITableViewController {
         static let ConversationCellIdentifier = "Conversation Cell"
         
         static let GoBackToChatSelectionSegue = "Go Back To Chat Selection"
+        
+        static let LogoutSegue = "Logout Segue"
+        
     }
     
+    // MARK: - Constants
     struct Constants {    
         static let NewConversationErrorAlertTitle = "There was a problem"
         static let NewConversationErrorAlertBody = "Chat could not be established with the given number."
@@ -42,27 +46,33 @@ class ChatSelectionTableViewController: UITableViewController {
     //The name of the user we are chatting with to display in chat
     private var toUserName : String?
     
+    //The action that is called when the user decides to start a conversation with entered phone number
     private var startChatAction : UIAlertAction?
     
+    //Network manager that will be responsible for storing messages, and downloaded messages from firebase
     private lazy var chatSelectionNM : ChatSelectionNetworkManager = {
-       let nm = ChatSelectionNetworkManager(delegate: self, userPhoneNumber: userPhoneNumber!)
+        let nm = ChatSelectionNetworkManager(delegate: self, userPhoneNumber: userPhoneNumber!)
         return nm
     }()
     
-    
     // MARK: - VC Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
     // MARK: - Chat Message Composition functions
     @IBAction func composeNewMessage(_ sender: Any) {
+        //User pressed the compose button, we present them with a alert VC that allows them to enter the number of a user they wish to chat with
         let newConversationAlertVC = createNewChatVC()
         present(newConversationAlertVC, animated: true, completion: nil)
     }
     
+    // MARK: - Sign Out functions
+    
+    //User pressed sign out, we unwind and send them back to the main screen
+    @IBAction func signOut(_ sender: Any) {
+        performSegue(withIdentifier: Storyboard.LogoutSegue, sender: self)
+    }
     
     // MARK: - New Conversation Alert Functions
     private func createNewChatVC() -> UIAlertController {
@@ -72,8 +82,9 @@ class ChatSelectionTableViewController: UITableViewController {
             textField.delegate = self
             textField.placeholder = "4441234"
         }
+        //Action to use if user decides to cancel
         let cancelAction = UIAlertAction(title: Constants.NewConversationAlertCancelButtonText, style: .cancel, handler: nil)
-        
+        //Action to use if user decides to start chat
         let continueAction = UIAlertAction(title: Constants.NewConversationAlertStartChatButtonText, style: .default) { [unowned self] (action) in
             
             
@@ -81,16 +92,20 @@ class ChatSelectionTableViewController: UITableViewController {
                 
                 //Check to see if the person you wish to chat with exists on the server
                 self.chatSelectionNM.shouldStartConversation(withReceiverPhoneNumber: toPhoneNumber, completionHandler: { (numberExists) in
+                    //If it does, we begin the chat by sending them to the chat view controller
                     if numberExists {
                         self.toPhoneNumber = toPhoneNumber
                         self.performSegue(withIdentifier: Storyboard.ChatSegue, sender: self)
                     } else {
+                        //Otherwise, we were unable to find the user and we send the user an error
                         let errorVC = self.createErrorAlert()
                         self.present(errorVC, animated: true, completion: nil)
                     }
                 })
             }
         }
+        
+        //We set the continue action to false at first until the user enters a valid phone number
         continueAction.isEnabled = false
         startChatAction = continueAction
         newConversationAlertVC.addAction(cancelAction)
@@ -99,6 +114,7 @@ class ChatSelectionTableViewController: UITableViewController {
         
     }
     
+    //Error alert to display incase the user entered an invalid phone number 
     private func createErrorAlert() -> UIAlertController {
         let errorAlertVC = UIAlertController(title: Constants.NewConversationErrorAlertTitle, message: Constants.NewConversationErrorAlertBody, preferredStyle: .alert)
         errorAlertVC.addAction(UIAlertAction(title: Constants.NewConversationAlertCancelButtonText, style: .cancel, handler: nil))
@@ -106,15 +122,16 @@ class ChatSelectionTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return chatSelectionNM.currentChats.count
+        
     }
     
     // MARK: - Tableview Delegate
@@ -126,30 +143,30 @@ class ChatSelectionTableViewController: UITableViewController {
         //Check to make sure we arent sending messages to our own number. 
         self.toPhoneNumber = message.receiverID == userPhoneNumber! ? message.senderID : message.receiverID
         performSegue(withIdentifier: Storyboard.ChatSegue, sender: self)
-
+        
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.TableViewCellHeight
     }
-
+    
     // MARK: - TableView Cell Registration
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.ConversationCellIdentifier, for: indexPath) as! ChatSelectionTableViewCell
-
+        
         let message = chatSelectionNM.currentChats[indexPath.row]
         cell.userPhoneNumber = userPhoneNumber
         
         cell.message = message 
-
+        
         return cell
     }
     
     
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {
@@ -170,10 +187,10 @@ class ChatSelectionTableViewController: UITableViewController {
     }
     
     @IBAction func unwindBackToChatSelection(segue : UIStoryboardSegue) {
-    
+        
     }
- 
-
+    
+    
 }
 
 extension ChatSelectionTableViewController : ChatSelectionViewModelDelegate {

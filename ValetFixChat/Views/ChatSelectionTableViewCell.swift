@@ -15,6 +15,7 @@ class ChatSelectionTableViewCell: UITableViewCell {
     struct Constants {
         static let DefaultDateFormat = "MM/dd/yy"
     }
+
     
     // MARK: - Message
     var message : Message? {
@@ -66,13 +67,13 @@ class ChatSelectionTableViewCell: UITableViewCell {
             }
             
         }
-        switch setMessage.content {
+        switch setMessage.kind {
         case .text(let bodyMessage) :
             self.bodyLabel.text = bodyMessage
         default :
             break
         }
-        self.dateLabel.text = dateFormatter.string(from: setMessage.timeStamp)
+        self.dateLabel.text = dateFormatter.string(from: setMessage.sentDate)
     }
     
     // MARK: - Init

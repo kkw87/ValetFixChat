@@ -27,8 +27,11 @@
 		481DDFBE220390FB0092E4DE /* ChatNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFBD220390FB0092E4DE /* ChatNetworkManager.swift */; };
 		481DDFC02203C9860092E4DE /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFBF2203C9860092E4DE /* UINavigationController+Extensions.swift */; };
 		481DDFC32203D1A90092E4DE /* ChatSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DDFC12203D1A90092E4DE /* ChatSelectionTableViewCell.swift */; };
-		48E580702203FF2F00B37C64 /* MessagePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5806F2203FF2F00B37C64 /* MessagePhoto.swift */; };
+		481E0D942207D47E00F13197 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E0D932207D47E00F13197 /* UIImage+Extensions.swift */; };
+		48E580702203FF2F00B37C64 /* MessageMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5806F2203FF2F00B37C64 /* MessageMedia.swift */; };
 		48E580722204928300B37C64 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E580712204928300B37C64 /* UIColor+Extensions.swift */; };
+		48E580742205F5BD00B37C64 /* AudioRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E580732205F5BD00B37C64 /* AudioRecordingView.swift */; };
+		48E580762205FD7F00B37C64 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E580752205FD7F00B37C64 /* AudioRecorder.swift */; };
 		5A5D732D3B7BB66A0D063CCE /* Pods_ValetFixChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A9F8EC17B074F5F68CF187 /* Pods_ValetFixChatTests.framework */; };
 		9541E6C757C862D984641BC9 /* Pods_ValetFixChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262A5FE85393FA117798FB7 /* Pods_ValetFixChat.framework */; };
 /* End PBXBuildFile section */
@@ -69,8 +72,11 @@
 		481DDFBD220390FB0092E4DE /* ChatNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNetworkManager.swift; sourceTree = "<group>"; };
 		481DDFBF2203C9860092E4DE /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		481DDFC12203D1A90092E4DE /* ChatSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSelectionTableViewCell.swift; sourceTree = "<group>"; };
-		48E5806F2203FF2F00B37C64 /* MessagePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePhoto.swift; sourceTree = "<group>"; };
+		481E0D932207D47E00F13197 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		48E5806F2203FF2F00B37C64 /* MessageMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageMedia.swift; sourceTree = "<group>"; };
 		48E580712204928300B37C64 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		48E580732205F5BD00B37C64 /* AudioRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordingView.swift; sourceTree = "<group>"; };
+		48E580752205FD7F00B37C64 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		69F31EE1704CE29129A8AD35 /* Pods-ValetFixChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValetFixChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat.debug.xcconfig"; sourceTree = "<group>"; };
 		8262A5FE85393FA117798FB7 /* Pods_ValetFixChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetFixChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A9F8EC17B074F5F68CF187 /* Pods_ValetFixChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValetFixChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				481DDFC12203D1A90092E4DE /* ChatSelectionTableViewCell.swift */,
+				48E580732205F5BD00B37C64 /* AudioRecordingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 		481DDF942200B7E70092E4DE /* Network Managers */ = {
 			isa = PBXGroup;
 			children = (
+				481DDFA52202120F0092E4DE /* AccountManager.swift */,
 				481DDFB722026E6F0092E4DE /* ChatSelectionNetworkmanager.swift */,
 				481DDFBD220390FB0092E4DE /* ChatNetworkManager.swift */,
 			);
@@ -208,6 +216,7 @@
 				481DDF9C2200BDC30092E4DE /* UIView+Extensions.swift */,
 				481DDFBF2203C9860092E4DE /* UINavigationController+Extensions.swift */,
 				48E580712204928300B37C64 /* UIColor+Extensions.swift */,
+				481E0D932207D47E00F13197 /* UIImage+Extensions.swift */,
 			);
 			path = "Utility Files";
 			sourceTree = "<group>";
@@ -216,9 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				481DDFA322020F140092E4DE /* UserDetails.swift */,
-				481DDFA52202120F0092E4DE /* AccountManager.swift */,
 				481DDFBB22029AF20092E4DE /* Message.swift */,
-				48E5806F2203FF2F00B37C64 /* MessagePhoto.swift */,
+				48E5806F2203FF2F00B37C64 /* MessageMedia.swift */,
+				48E580752205FD7F00B37C64 /* AudioRecorder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,11 +382,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ValetFixChat/Pods-ValetFixChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RecordButton/RecordButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -386,11 +397,13 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RecordButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -453,6 +466,7 @@
 			files = (
 				481DDFA422020F140092E4DE /* UserDetails.swift in Sources */,
 				481DDFA922021BB80092E4DE /* ChatSelectionTableViewController.swift in Sources */,
+				48E580762205FD7F00B37C64 /* AudioRecorder.swift in Sources */,
 				481DDF9D2200BDC30092E4DE /* UIView+Extensions.swift in Sources */,
 				481DDF742200B7D60092E4DE /* AppDelegate.swift in Sources */,
 				481DDF9B2200BB380092E4DE /* MainScreenViewController.swift in Sources */,
@@ -460,10 +474,12 @@
 				481DDFA12201853C0092E4DE /* AccountCreationViewController.swift in Sources */,
 				481DDFA62202120F0092E4DE /* AccountManager.swift in Sources */,
 				481DDFC32203D1A90092E4DE /* ChatSelectionTableViewCell.swift in Sources */,
+				481E0D942207D47E00F13197 /* UIImage+Extensions.swift in Sources */,
 				481DDFBE220390FB0092E4DE /* ChatNetworkManager.swift in Sources */,
 				481DDFB822026E6F0092E4DE /* ChatSelectionNetworkmanager.swift in Sources */,
+				48E580742205F5BD00B37C64 /* AudioRecordingView.swift in Sources */,
 				481DDFAD22021F270092E4DE /* ChatViewController.swift in Sources */,
-				48E580702203FF2F00B37C64 /* MessagePhoto.swift in Sources */,
+				48E580702203FF2F00B37C64 /* MessageMedia.swift in Sources */,
 				481DDFAB22021C500092E4DE /* UserInformationTableViewController.swift in Sources */,
 				481DDFC02203C9860092E4DE /* UINavigationController+Extensions.swift in Sources */,
 				48E580722204928300B37C64 /* UIColor+Extensions.swift in Sources */,

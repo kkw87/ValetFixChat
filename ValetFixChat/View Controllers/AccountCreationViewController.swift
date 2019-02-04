@@ -9,11 +9,13 @@
 import UIKit
 import AccountKit
 
+//Enum to determine which text field we are dealing with
 enum TextFieldType {
     case FirstNameLabel
     case LastNameLabel
 }
 
+//Dictionary to store tags to labels
 let textFieldTags = [0 : TextFieldType.FirstNameLabel, 1 : TextFieldType.LastNameLabel]
 
 class AccountCreationViewController: UIViewController {
@@ -53,13 +55,16 @@ class AccountCreationViewController: UIViewController {
         }
     }
     // MARK: - Constraints
+    //Constraints used to animate keyboard appearance/dissapearance
     @IBOutlet weak var continueButtonDistanceToBottom: NSLayoutConstraint!
     @IBOutlet weak var nameInputDistanceToBottom: NSLayoutConstraint!
     
     // MARK: - Instance Variables
     
+    //New user object where we store user nam
     var newUser : UserDetails?
     
+    //Variable to determine whether or not the name error label should be hidden or shown
     private var firstNameErrorLabelIsHidden = true {
         didSet {
             if firstNameErrorLabelIsHidden {
@@ -80,11 +85,13 @@ class AccountCreationViewController: UIViewController {
         }
     }
     
+    
     private lazy var accountKit : AKFAccountKit = {
         let ak = AKFAccountKit(responseType: .accessToken)
         return ak
     }()
     
+    //Facebook account kit VC we use to verify users phone number
     private lazy var phoneNumberVerificationVC : AKFViewController & UIViewController = {
        let inputState = UUID().uuidString
         let vc = accountKit.viewControllerForPhoneLogin(with: nil, state: inputState)
@@ -97,6 +104,7 @@ class AccountCreationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //We add in a gesture recognizer here to dismiss any keyboards if the user clicks outside of it
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboards)))
     }
     
@@ -171,16 +179,20 @@ extension AccountCreationViewController : UITextFieldDelegate {
 // MARK: - AFKViewController Delegate
 extension AccountCreationViewController : AKFViewControllerDelegate {
     
+    //User verified their phone number
     func viewController(_ viewController: (UIViewController & AKFViewController)!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
         
+        //Request user phone number which we will use as the account ID
         accountKit.requestAccount { [unowned self] (account, error) in
-            
+            //Pull user phone number from returned value
             guard let userPhoneNumber = account?.phoneNumber?.phoneNumber else {
                 return
             }
             
+            //Set the user name as a combination of the first and last name
             let fullUserName = "\(self.firstNameLabel.text!) \(self.lastNameLabel.text!)"
             
+            //Create the new user with name and phone number and send the user back to the main screen 
             self.newUser = UserDetails(userName : fullUserName, userPhoneNumber : userPhoneNumber)
             self.performSegue(withIdentifier: Storyboard.MainScreenUnwindSegue, sender: self)
         }

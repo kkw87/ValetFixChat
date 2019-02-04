@@ -24,6 +24,7 @@ class UserInformationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Check if we have the users phone number from log in, if we do, we fetch their information from firebase
         if userPhoneNumber != nil {
             pullUserInformation(fromNumber: userPhoneNumber!)
         }
@@ -36,6 +37,7 @@ class UserInformationTableViewController: UITableViewController {
     
     // MARK: - Network functions
     
+    //Fetch user name and from number from firebase 
     private func pullUserInformation(fromNumber : String) {
         FirebaseDatabase.UserDatabaseReference.child(fromNumber).observeSingleEvent(of: .value) {[weak self] (data) in
             

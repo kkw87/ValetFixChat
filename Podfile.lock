@@ -1,5 +1,6 @@
 PODS:
   - AccountKit (4.35.0)
+  - AMPopTip (3.5.0)
   - Firebase (5.16.0):
     - Firebase/Core (= 5.16.0)
   - Firebase/Core (5.16.0):
@@ -85,10 +86,12 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - RecordButton (1.0.2)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - AccountKit
+  - AMPopTip
   - Firebase
   - Firebase/Core
   - Firebase/Database
@@ -96,11 +99,13 @@ DEPENDENCIES:
   - Firebase/Storage
   - MessageInputBar
   - MessageKit
+  - RecordButton
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AccountKit
+    - AMPopTip
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -118,10 +123,12 @@ SPEC REPOS:
     - MessageKit
     - nanopb
     - Protobuf
+    - RecordButton
     - SVProgressHUD
 
 SPEC CHECKSUMS:
   AccountKit: 870ccaf5d33facda9408783e28fbe68c5211e069
+  AMPopTip: 871ae0570b68fe396e714922b3f7d8ed6a36bb71
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
   FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
   FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
@@ -139,8 +146,9 @@ SPEC CHECKSUMS:
   MessageKit: 29c1c87e5a396d2ca7a3f712e5171dc9aba42a1e
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  RecordButton: 76677be0f4b94f8a387454a23b4b64bd9b6c0e51
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 9f4e23238175df6f59c1006c347ce4f1b9c430ae
+PODFILE CHECKSUM: 10928993d8ed06f850332940c7eac546e29f3c1c
 
 COCOAPODS: 1.5.3

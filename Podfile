@@ -15,6 +15,8 @@ target 'ValetFixChat' do
   pod 'AccountKit'
   pod 'MessageKit'
   pod 'MessageInputBar'
+  pod 'AMPopTip'
+  pod 'RecordButton'
 
   target 'ValetFixChatTests' do
     inherit! :search_paths

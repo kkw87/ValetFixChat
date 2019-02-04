@@ -32,4 +32,5 @@ struct MessageKeys {
     static let MessageBodyKey = "body"
     static let MessageTimeKey = "time_stamp"
     static let MessageImageURLKey = "image_url"
+    static let MessageAudioURLKey = "audio_url"
 }
